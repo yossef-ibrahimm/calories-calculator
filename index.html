@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calories calculator</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="form">
+        <h1>Calories Calculator</h1>
+        <div class="username t-input">
+          <input
+            name="Age(year) more than 15year"
+            id="age"
+            class="input"
+            placeholder="age(year)"
+            required
+            type="text"
+            value="18"
+            minlength="2"
+          />
+          <label for="age">age</label>
+          <div class="b-line"></div>
+          <small class="input-alert"></small>
+        </div>
+
+        <div class="username t-input">
+          <input
+            type="text"
+            name="height(cm) more than 100cm"
+            id="height"
+            placeholder="height(cm)"
+            class="input"
+            required
+            value="185"
+            minlength="3"
+          />
+          <label for="height">height</label>
+          <div class="b-line"></div>
+          <small class="input-alert"></small>
+        </div>
+
+        <div class="username t-input">
+          <input
+            type="text"
+            name="weight(kg) more than 30kg"
+            id="weight"
+            placeholder="weight(kg)"
+            value="75"
+            class="input"
+            required
+            minlength="2"
+          />
+          <label for="weight">weight</label>
+          <div class="b-line"></div>
+          <small class="input-alert"></small>
+        </div>
+
+        <div id="radio_div">
+          <label class="labell"> gender </label>
+          <input
+            type="radio"
+            checked
+            name="gender"
+            required
+            value="male"
+            id="male"
+          />
+          <label for="male" class="lable_radio"> male </label>
+          <input
+            type="radio"
+            name="gender"
+            required
+            value="female"
+            id="female"
+          />
+          <label for="female" class="lable_radio">female</label>
+        </div>
+        <div>
+          <label for="activity_level" class="labell"
+            >your activity level:</label
+          >
+          <select name="cars" id="activity_level">
+            <option value="1">bmr</option>
+            <option value="1.2">little or No Activity</option>
+            <option value="1.375">light exercise 1-3times/week</option>
+            <option value="1.55">Moderate: exercise 4-5times/week</option>
+            <option value="1.725">active: exercise 6-7times/week</option>
+            <option value="1.9">
+              very active: exercise twice/day 6-7times/week
+            </option>
+          </select>
+        </div>
+        <h1>your goal</h1>
+        <div class="goals">
+          <button type="button" data-goal="500" class="goal_btn">
+            gain weight
+          </button>
+          <button type="button" data-goal="0" class="goal_btn active">
+            Maintain your weight
+          </button>
+          <button type="button" data-goal="-500" class="goal_btn">
+            lose weight
+          </button>
+        </div>
+        <button type="submit" id="calc">calculat</button>
+        <h1>result</h1>
+        <div class="result"></div>
+      </div>
+    </div>
+
+    <script src="./js/main.js" defer></script>
+  </body>
+</html>
